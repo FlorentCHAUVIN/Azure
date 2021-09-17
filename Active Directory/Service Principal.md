@@ -1,18 +1,23 @@
-# Exemple de requêtes pour créer un service principal
+**Vous trouverez dans te page des exemples de requête pour créer et mettre à jour un service principal**
 
-## Méthode par défaut en CLI pour générer un service principal
+- [Méthode par défaut en CLI pour générer un service principal](#méthode-par-défaut-en-cli-pour-générer-un-service-principal)
+- [Méthode en CLI pour générer un service principal en choisissant la durée d'expiration du mot de passe](#méthode-en-cli-pour-générer-un-service-principal-en-choisissant-la-durée-dexpiration-du-mot-de-passe)
+- [Mettre à jour le Service Principal d'un cluster AKS](#mettre-à-jour-le-service-principal-dun-cluster-aks)
+
+
+# Méthode par défaut en CLI pour générer un service principal
 
 C'est le type de commande que j'ai pu utiliser pour créer des Service Principal utiliser lors de la création d'un cluster AKS
 
-    ad sp create-for-rbac --name MY-SP-NAME --skip-assignment 
+    ad sp create-for-rbac --name "MY-SP-NAME" --skip-assignment 
 
-## Méthode en CLI pour générer un service principal en choisissant la durée d'expiration du mot de passe
+# Méthode en CLI pour générer un service principal en choisissant la durée d'expiration du mot de passe
 
 En effet même si en terme de sécurité on préférerait laisser la valeur par défaut, il faut parfois faire des compromis ! C'est notamment le cas pour les clients n'ayant pas les compétences nécessaire au renvouvellement d'un mot de passe d'un Service Principal AKS. La possibilité de créer des cluster AKS avec une identité managé devrait toutefois simplifier ce dernier point.
 
     az ad sp create-for-rbac -n "MY-SP-NAME" --skip-assignment --years 20
 
-## Mettre à jour le Service Principal d'un cluster AKS
+# Mettre à jour le Service Principal d'un cluster AKS
 
 Si vous avez un cluster AKS utilisant un Service Principal, vous allez devoir le mettre à jour avant chaque expiration du mot de passe.
 

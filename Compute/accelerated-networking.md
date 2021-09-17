@@ -1,3 +1,8 @@
+- [Optimisation réseau des VMs](#optimisation-réseau-des-vms)
+  - [Activation de accelerated-networking sur une VM](#activation-de-accelerated-networking-sur-une-vm)
+  - [Activation de accelerated-networking sur un Scale Set de VM](#activation-de-accelerated-networking-sur-un-scale-set-de-vm)
+
+
 # Optimisation réseau des VMs
 
 Normalement Azure active automatiquement la fonctionnalité 'accelerated-networking' sur les VMs qui la supporte toutefois dans la réalité que ce soit côté VM ou Scale Set, cela n'est pas toujours le cas !

@@ -1,3 +1,10 @@
+- [Création de peering entre deux VNets situés dans des abonnements/tenants différents](#création-de-peering-entre-deux-vnets-situés-dans-des-abonnementstenants-différents)
+  - [Procédure avec compte utilisateur en invité](#procédure-avec-compte-utilisateur-en-invité)
+  - [Procédure avec SERVICE PRINCIPALE](#procédure-avec-service-principale)
+    - [Azure PowerShell example :](#azure-powershell-example-)
+    - [Azure CLI Example](#azure-cli-example)
+    - [ARM REST API Example](#arm-rest-api-example)
+
 # Création de peering entre deux VNets situés dans des abonnements/tenants différents
 
 ## Procédure avec compte utilisateur en invité

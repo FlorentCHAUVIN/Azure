@@ -51,6 +51,7 @@ In the 2nd Azure AD tenant, consent to the multi-tenanted application so that co
 Consent URL example
 https:// login.microsoftonline.com/TENANT2_ID/oauth2/authorize?client_id=CLIENT_ID_OF_MULTI_TENATED_APPLICATION&response_type=code
 
+**Le service principale devra avoir à minima les droits 'Network contributor' sur les VNets des deux tenants qui font l'objet du peering.**
 
 ### Azure PowerShell example :
 
@@ -74,11 +75,9 @@ https:// login.microsoftonline.com/TENANT2_ID/oauth2/authorize?client_id=CLIENT_
     az account clear
     az login --service-principal -u "CLIENT_ID" -p "CLIENT_SECRET" --tenant "TENANT1_ID"
     az account get-access-token
+    az network vnet peering create --name vnet1-vnet2 --resource-group vnetpeer1 --vnet-name vnetpeer1 --remote-vnet "/subscriptions/SUBSCRIPTION2_ID/resourceGroups/vnetpeer2/providers/Microsoft.Network/virtualNetworks/vnetpeer2" --allow-vnet-access
     az login --service-principal -u "CLIENT_ID" -p "CLIENT_SECRET" --tenant "TENANT2_ID"
     az account get-access-token
-    ## The following did not work properly in Azure CLI version 2.0.50 when using multi-tenanted application service principal
-    ## However, as of 2018-11-27, the issue is fixed in Azure CLI versions 2.0.52 and later via this pull request https://github.com/Azure/azure-cli/pull/7916
-    az network vnet peering create --name vnet1-vnet2 --resource-group vnetpeer1 --vnet-name vnetpeer1 --remote-vnet "/subscriptions/SUBSCRIPTION2_ID/resourceGroups/vnetpeer2/providers/Microsoft.Network/virtualNetworks/vnetpeer2" --allow-vnet-access
     az network vnet peering create --name vnet2-vnet1 --resource-group vnetpeer2 --vnet-name vnetpeer2 --remote-vnet "/subscriptions/SUBSCRIPTION1_ID/resourceGroups/vnetpeer1/providers/Microsoft.Network/virtualNetworks/vnetpeer1" --allow-vnet-access  --allowForwardedTraffic
 
 

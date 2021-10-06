@@ -14,7 +14,9 @@ Bien entendu, je décline toute responsabilité sur l'usage que vous pourriez fa
   - [USers & Groups](Active%20Directory/Users%20&%20Groups.md)
 - [Compute](Compute)
   - [Accelerated Networking](Compute/accelerated-networking.md)
+  - [Deploy VM](Compute/Azure-Deploy-VM/Azure-Deploy-VM.md)
   - [Recreate VM with Managed Disk](Compute/Recreate_VM_With%20Managed_Disk.ps1)
 - [Network](Network)
+  - [Deploy NSG Rules](Network/Azure-Deploy-NSG-Rules/Azure-Deploy-NSG-Rules.md)- 
   - [Route table](Network/RouteTable/RouteTable.md)
   - [VNet Peering](Network/VNet-Peering/VNet-Peering.md)

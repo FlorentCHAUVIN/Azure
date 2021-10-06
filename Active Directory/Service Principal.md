@@ -1,4 +1,4 @@
-**Vous trouverez dans te page des exemples de requête pour créer et mettre à jour un service principal**
+**Vous trouverez dans cette page des exemples de requête pour créer et mettre à jour un service principal**
 
 - [Méthode par défaut en CLI pour générer un service principal](#méthode-par-défaut-en-cli-pour-générer-un-service-principal)
 - [Méthode en CLI pour générer un service principal en choisissant la durée d'expiration du mot de passe](#méthode-en-cli-pour-générer-un-service-principal-en-choisissant-la-durée-dexpiration-du-mot-de-passe)

@@ -1,0 +1,1 @@
+NSGName;ResourceGroupName;Location;VirtualNetworkName;SubnetName;RuleName;Description;Direction;Priority;Access;SourceAddressPrefix;SourcePortRange;DestinationAddressPrefix;DestinationPortRange;Protocol
